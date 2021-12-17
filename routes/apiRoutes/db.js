@@ -1,17 +1,24 @@
 const router = require('express').Router();
-const {db} = require ('../../db/db.json')
-const {createNewNote} = require ('../../lib/db')
+const db= require ('../../db/db.json')
+const {createNewNote, findById} = require ('../../lib/db')
+
 
 
 router.get('/notes', (req, res) => {
-    let results = db;
+    console.log("line 7 ")  
+  let results = db;
     res.json(results);
+    console.log(results)
 });
 
 
+
+
+
+
 // delete route
-router.get('/animals/:id', (req, res) => {
-    const result = findById(req.params.id, animals);
+router.get('/notes/:id', (req, res) => {
+    const result = findById(req.params.id, db);
     if (result) {
       res.json(result);
     } else {
@@ -22,8 +29,11 @@ router.get('/animals/:id', (req, res) => {
 router.post('/notes', (req, res) => {
     // set id based on what the next index of the array will be
     req.body.id = db.length.toString();
-    const db = createNewNote(req.body, db);
-    res.json(db);   
+    // console.log(db.notesArray.length)
+    const note = createNewNote(req.body, db);
+   
+    res.json(note);   
+    //  res.send('post request received')
 });
 
 module.exports = router;
