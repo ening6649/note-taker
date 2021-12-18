@@ -1,23 +1,21 @@
-# Team Profile Generator (node.index to start)
-## Generate a webpage that displays my team
-* this page will display my team's basic info
-* a quick access to the teamate's email is display
-* a quick access to the github profile is display if one is an engineer
-## Command-line application
-* this application will accept user input
-* application will start by node.index 
-* when started, the application will prompt the user to enter info
-## Team info
-* a user will be asked to select the employee type
-* only info specific to the employee type will be prompted 
-## Generate HTML 
-* when the application is finished, a HTML page is generated
-* the HTML page will display the user's input
-## Github and Email
-* when a user click on the email or github, the user opens that address in a new page
-* work in progress
-## JEST test
-* The application passes all jest tests
-* for each of the role
-* work in progress
-## walkthrough video: <a href="https://watch.screencastify.com/v/fsJkmLVtJHH60p8Yzohz">My walkthrough video</a>
+# Note taker
+## write and save notes 
+* this page will keep track of tasks in the form of notes
+* allows a user to write notes
+* allows a user to save notes
+## Landing page
+* A landing page is presented when this app is open
+* start button will be presented on the landing page
+* when clicked, the notes page will be presented
+## Notes page
+* existing notes will be listed on the left hand side
+* enter new note title and text will be listed on the right hand side
+## save a note
+* a save icon will appear in the navigation after a new note is entered
+* when click, the new note is saved and appears on the left hand side
+## saved notes
+* when a saved note is clicked, the note appears in the right hand side
+## new notes
+* when the write icon is clicked, a user cna enter a new note
+## Link to my website on heroku  https://notetaker7335.herokuapp.com/
+## screenshot  <img src="/screenshot.png" alt= "ScreenShot"/>

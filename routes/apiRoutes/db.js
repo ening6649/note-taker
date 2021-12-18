@@ -17,10 +17,17 @@ router.get('/notes', (req, res) => {
 
 
 // delete route
-router.get('/notes/:id', (req, res) => {
-    const result = findById(req.params.id, db);
+router.delete('/notes/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log('line22')
+  const result = findById(req.params.id, db);
     if (result) {
       res.json(result);
+     
+      
+      result.splice(0,1)
+     
+      
     } else {
       res.send(404);
     }
